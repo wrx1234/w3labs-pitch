@@ -175,6 +175,7 @@ html{scroll-snap-type:y mandatory;scroll-behavior:smooth}
 .qr-placeholder .qr-icon{font-size:clamp(1.3rem,2vw,1.8rem);line-height:1;color:var(--accent)}
 .qr-placeholder .qr-text{font-size:var(--small-size);font-weight:700;letter-spacing:0.04em}
 .qr-placeholder.pending .qr-text{color:var(--text3)}
+.qr-placeholder img{width:100%;height:100%;object-fit:cover;display:block;border-radius:calc(var(--r) - 2px)}
 .qr-scan-line{
   position:absolute;top:-4px;left:0;width:100%;height:3px;
   background:linear-gradient(90deg,transparent,var(--accent),transparent);
@@ -756,10 +757,10 @@ html{scroll-snap-type:y mandatory;scroll-behavior:smooth}
     <h2 class="t-h2 rv d1">核心团队</h2>
     <div class="team-grid">
       <div class="team-card">
-        <div class="team-avatar-img placeholder rv-zoom d2" id="avatar-xuan">X</div>
+        <div class="team-avatar-img rv-zoom d2" id="avatar-xuan"><img src="images/avatar-xuan-candidate.jpg" alt="Xuan"></div>
         <div class="team-name rv d3">Xuan</div>
         <div class="team-role rv d3">Co-founder & CEO</div>
-        <div class="team-bio rv d4">AI专家 · 行业认证讲师<br>AI Expert & Certified Trainer<br><span style="color:var(--text4)">头像原图待补</span></div>
+        <div class="team-bio rv d4">AI专家 · 行业认证讲师<br>AI Expert & Certified Trainer</div>
       </div>
       <div class="team-card">
         <div class="team-avatar-img rv-zoom d4" id="avatar-kelly"><img src="images/avatar-kelly-fixed.png" alt="Kelly"></div>
@@ -848,43 +849,35 @@ html{scroll-snap-type:y mandatory;scroll-behavior:smooth}
     <h2 class="t-h2 rv d1">媒体与内容</h2>
     <div class="qr-grid rv d2">
       <div class="qr-box">
-        <div class="qr-placeholder pending">
-          <div class="qr-scan-line" style="--scan-delay:0.3s"></div>
-          <div class="qr-icon">◫</div>
-          <div class="qr-text">COMING SOON</div>
+        <div class="qr-placeholder">
+          <img src="images/qr-wechat-official.png" alt="公众号二维码">
         </div>
         <div class="qr-label">公众号</div>
         <div class="qr-sublabel">WeChat Official</div>
       </div>
       <div class="qr-box">
-        <div class="qr-placeholder pending">
-          <div class="qr-scan-line" style="--scan-delay:0.6s"></div>
-          <div class="qr-icon">◫</div>
-          <div class="qr-text">COMING SOON</div>
+        <div class="qr-placeholder">
+          <img src="images/qr-xiaohongshu.png" alt="小红书二维码">
         </div>
         <div class="qr-label">小红书</div>
         <div class="qr-sublabel">Xiaohongshu</div>
       </div>
       <div class="qr-box">
-        <div class="qr-placeholder pending">
-          <div class="qr-scan-line" style="--scan-delay:0.9s"></div>
-          <div class="qr-icon">◫</div>
-          <div class="qr-text">COMING SOON</div>
+        <div class="qr-placeholder">
+          <img src="images/qr-video-channel.png" alt="视频号二维码">
         </div>
         <div class="qr-label">视频号</div>
         <div class="qr-sublabel">WeChat Video</div>
       </div>
       <div class="qr-box">
-        <div class="qr-placeholder pending">
-          <div class="qr-scan-line" style="--scan-delay:1.2s"></div>
-          <div class="qr-icon">◫</div>
-          <div class="qr-text">COMING SOON</div>
+        <div class="qr-placeholder">
+          <img src="images/qr-instagram.png" alt="Instagram 二维码">
         </div>
         <div class="qr-label">Instagram</div>
         <div class="qr-sublabel">@w3labs</div>
       </div>
     </div>
-    <p class="t-small rv d5" style="color:var(--text3)">4 个媒体入口素材待补，先用统一占位样式避免页面崩坏 · Media assets pending</p>
+    <p class="t-small rv d5" style="color:var(--text3)">4 个媒体入口已替换为正式图片，供本轮线上显示确认 · Media assets updated for review</p>
   </div>
 </section>
 
