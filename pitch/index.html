@@ -340,15 +340,21 @@ html{scroll-snap-type:y mandatory;scroll-behavior:smooth}
 .hero-float-card .hfc-title{font-size:var(--body-size);font-weight:700;color:var(--text)}
 .hero-float-card .hfc-sub{font-size:var(--small-size);color:var(--text3)}
 
-/* P6 image slot */
+/* P6 case study layout */
+.case-study-layout{
+  width:100%;display:grid;grid-template-columns:minmax(0,1.06fr) minmax(320px,0.94fr);
+  gap:clamp(1.2rem,2.4vw,2rem);align-items:stretch;
+}
 .case-img-wrap{
-  width:100%;max-width:780px;
+  width:100%;height:100%;min-height:clamp(280px,46vh,460px);
   border-radius:var(--r2);overflow:hidden;
   border:1.5px solid var(--border);
-  aspect-ratio:16/9;background:var(--surface);
-  display:flex;align-items:center;justify-content:center;
+  background:var(--surface);display:flex;align-items:center;justify-content:center;
 }
 .case-img-wrap img{width:100%;height:100%;object-fit:cover;display:block}
+.case-copy-col{display:flex;flex-direction:column;gap:clamp(0.9rem,1.6vw,1.2rem);justify-content:center}
+.case-copy-col .card-grid{margin-top:0.2rem}
+.case-lead{font-size:clamp(1rem,1.8vw,1.16rem);line-height:1.65;color:var(--text2);max-width:34ch}
 
 /* Team photo avatar */
 .team-avatar-img{
@@ -373,6 +379,9 @@ html{scroll-snap-type:y mandatory;scroll-behavior:smooth}
   .hero-left{text-align:center}
   .hero-stats{justify-content:center}
   .hero-btns{justify-content:center}
+  .case-study-layout{grid-template-columns:1fr}
+  .case-copy-col{text-align:left}
+  .case-img-wrap{min-height:clamp(220px,36vh,320px)}
 }
 </style>
 </head>
@@ -534,38 +543,43 @@ html{scroll-snap-type:y mandatory;scroll-behavior:smooth}
 <!-- ===== Slide 6: Case Study ===== -->
 <section class="slide slide-alt" id="s6">
   <div class="slide-content">
-    <div class="rv-left d0" style="text-align:center">
-      <div class="overline">Case Study · 活动案例</div>
-      <h2 class="t-h2" style="margin-top:0.3rem">长沙 · AI智能体企业级应用实战论坛</h2>
-      <p class="t-body" style="color:var(--accent);font-weight:600;margin-top:0.3rem">养龙虾 × W³ Labs × 政府联合主办</p>
-    </div>
-    <div class="case-img-wrap rv d2" style="max-height:clamp(100px,18vh,160px)">
-      <img src="images/p6-changsha.png" alt="长沙活动现场" style="width:100%;height:100%;object-fit:cover">
-    </div>
-    <div class="card-grid g2">
-      <div class="card rv-left d3">
-        <span class="card-icon">📍</span>
-        <div class="card-en">National-Level Venue</div>
-        <div class="card-title">马栏山视频文创园</div>
-        <div class="card-body">国家级视频产业基地</div>
+    <div class="case-study-layout">
+      <div class="case-img-wrap rv-left d1">
+        <img src="images/p6-changsha.png" alt="长沙活动现场主视觉">
       </div>
-      <div class="card rv-right d3">
-        <span class="card-icon">👥</span>
-        <div class="card-en">Large-Scale Forum</div>
-        <div class="card-title">300-500人规模</div>
-        <div class="card-body">企业级大型实战论坛</div>
-      </div>
-      <div class="card rv-left d5">
-        <span class="card-icon">🏛️</span>
-        <div class="card-en">Government Co-hosted</div>
-        <div class="card-title">政府联合主办</div>
-        <div class="card-body">政府主管部门 + 云上栏山 + W³ Labs</div>
-      </div>
-      <div class="card rv-right d5">
-        <span class="card-icon">📚</span>
-        <div class="card-en">3 Core Modules</div>
-        <div class="card-title">三大内容模块</div>
-        <div class="card-body">AI落地方法论 · 数据安全 · AIGC实操</div>
+      <div class="case-copy-col">
+        <div class="rv-right d0">
+          <div class="overline">Case Study · 活动案例</div>
+          <h2 class="t-h2" style="margin-top:0.3rem">长沙 · AI智能体企业级应用实战论坛</h2>
+          <p class="t-body" style="color:var(--accent);font-weight:600;margin-top:0.3rem">养龙虾 × W³ Labs × 政府联合主办</p>
+        </div>
+        <p class="case-lead rv-right d1">以国家级音视频产业基地为场景，聚焦企业级 AI 智能体落地，从方法论、数据安全到 AIGC 实操，帮助企业把“能讲”变成“能用”。</p>
+        <div class="card-grid g2">
+          <div class="card rv-right d2">
+            <span class="card-icon">📍</span>
+            <div class="card-en">National-Level Venue</div>
+            <div class="card-title">马栏山视频文创园</div>
+            <div class="card-body">国家级视频产业基地</div>
+          </div>
+          <div class="card rv-right d3">
+            <span class="card-icon">👥</span>
+            <div class="card-en">Large-Scale Forum</div>
+            <div class="card-title">300-500人规模</div>
+            <div class="card-body">企业级大型实战论坛</div>
+          </div>
+          <div class="card rv-right d4">
+            <span class="card-icon">🏛️</span>
+            <div class="card-en">Government Co-hosted</div>
+            <div class="card-title">政府联合主办</div>
+            <div class="card-body">政府主管部门 + 云上栏山 + W³ Labs</div>
+          </div>
+          <div class="card rv-right d5">
+            <span class="card-icon">📚</span>
+            <div class="card-en">3 Core Modules</div>
+            <div class="card-title">三大内容模块</div>
+            <div class="card-body">AI落地方法论 · 数据安全 · AIGC实操</div>
+          </div>
+        </div>
       </div>
     </div>
   </div>
