@@ -341,20 +341,24 @@ html{scroll-snap-type:y mandatory;scroll-behavior:smooth}
 .hero-float-card .hfc-sub{font-size:var(--small-size);color:var(--text3)}
 
 /* P6 case study layout */
+#s6 .slide-content{max-width:1240px}
 .case-study-layout{
-  width:100%;display:grid;grid-template-columns:minmax(0,1.06fr) minmax(320px,0.94fr);
-  gap:clamp(1.2rem,2.4vw,2rem);align-items:stretch;
+  width:100%;display:grid;grid-template-columns:minmax(0,0.98fr) minmax(0,1.02fr);
+  gap:clamp(1rem,2vw,1.6rem);align-items:stretch;
 }
 .case-img-wrap{
-  width:100%;height:100%;min-height:clamp(280px,46vh,460px);
+  width:100%;height:100%;min-height:clamp(280px,44vh,430px);
   border-radius:var(--r2);overflow:hidden;
   border:1.5px solid var(--border);
   background:var(--surface);display:flex;align-items:center;justify-content:center;
 }
 .case-img-wrap img{width:100%;height:100%;object-fit:cover;display:block}
-.case-copy-col{display:flex;flex-direction:column;gap:clamp(0.9rem,1.6vw,1.2rem);justify-content:center}
-.case-copy-col .card-grid{margin-top:0.2rem}
-.case-lead{font-size:clamp(1rem,1.8vw,1.16rem);line-height:1.65;color:var(--text2);max-width:34ch}
+.case-copy-col{display:flex;flex-direction:column;gap:clamp(0.75rem,1.3vw,1rem);justify-content:center;min-width:0}
+.case-copy-col .card-grid{margin-top:0.15rem;gap:clamp(0.75rem,1.2vw,1rem)}
+#s6 .card{padding:clamp(0.95rem,1.6vw,1.25rem)}
+#s6 .card-title{font-size:clamp(0.95rem,1.45vw,1.2rem);line-height:1.28}
+#s6 .card-body{font-size:clamp(0.72rem,1vw,0.82rem);line-height:1.45}
+.case-lead{font-size:clamp(0.98rem,1.55vw,1.08rem);line-height:1.62;color:var(--text2);max-width:none}
 
 /* Team photo avatar */
 .team-avatar-img{
@@ -370,6 +374,12 @@ html{scroll-snap-type:y mandatory;scroll-behavior:smooth}
 }
 .team-avatar-img img{
   width:100%;height:100%;object-fit:cover;border-radius:50%;
+}
+.founder-photo-fix{
+  object-position:center top;
+  transform:scale(1.7);
+  transform-origin:center top;
+  filter:saturate(1.12) contrast(1.05);
 }
 
 
@@ -777,13 +787,13 @@ html{scroll-snap-type:y mandatory;scroll-behavior:smooth}
         <div class="team-bio rv d4">AI专家 · 行业认证讲师<br>AI Expert & Certified Trainer</div>
       </div>
       <div class="team-card">
-        <div class="team-avatar-img rv-zoom d4" id="avatar-kelly"><img src="images/avatar-kelly-fixed.png" alt="Kelly"></div>
+        <div class="team-avatar-img rv-zoom d4" id="avatar-kelly"><img class="founder-photo-fix" src="images/avatar-owen-fixed.png" alt="Kelly"></div>
         <div class="team-name rv d5">Kelly</div>
         <div class="team-role rv d5">Co-founder</div>
         <div class="team-bio rv d6">活动运营专家<br>Events & Operations Expert</div>
       </div>
       <div class="team-card">
-        <div class="team-avatar-img rv-zoom d6" id="avatar-owen"><img src="images/avatar-owen-fixed.png" alt="Owen"></div>
+        <div class="team-avatar-img rv-zoom d6" id="avatar-owen"><img class="founder-photo-fix" src="images/avatar-kelly-fixed.png" alt="Owen"></div>
         <div class="team-name rv d7">Owen</div>
         <div class="team-role rv d7">Co-founder</div>
         <div class="team-bio rv d8">技术架构师<br>Technical Architect</div>
